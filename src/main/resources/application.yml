@@ -5,6 +5,9 @@ spring:
       - localhost:9092
     producer:
       key-serializer:
+    consumer:
+      bootstrap-servers:
+        - localhost:9092
   application:
     name: product-applixcation
   datasource:
