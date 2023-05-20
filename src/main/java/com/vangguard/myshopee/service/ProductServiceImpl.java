@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ProductServiceImpl  implements ProductService{
-    private ProductRepository productRepository;
+    private  final ProductRepository productRepository;
 
     public ProductServiceImpl(ProductRepository productRepository) {
         this.productRepository = productRepository;
@@ -15,7 +15,7 @@ public class ProductServiceImpl  implements ProductService{
 
 
     @Override
-    public Product saveProduct(Product producrt) {
-        return productRepository.save(producrt);
+    public Product saveProduct(Product product) {
+        return productRepository.save(product);
     }
 }
